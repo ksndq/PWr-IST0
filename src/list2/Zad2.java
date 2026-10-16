@@ -1,4 +1,4 @@
-package list1;
+package list2;
 
 public class Zad2 {
 

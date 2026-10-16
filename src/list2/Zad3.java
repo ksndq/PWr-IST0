@@ -1,9 +1,8 @@
-package list1;
+package list2;
 
 public class Zad3 {
     public static void main(String[] args) {
         int year = 2024;
-        int month = 2;
 
         if (isLeapYear(year)) {
             System.out.printf("Luty w roku %s ma 29 dni.", year);

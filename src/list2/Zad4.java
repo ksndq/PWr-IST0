@@ -1,10 +1,10 @@
-package list1;
+package list2;
 
 public class Zad4 {
     public static void main(String[] args) {
         int a = 5;
-        int b = 6;
-        int c = 1;
+        int b = 5;
+        int c = 8;
 
         if (isValidTriangle(a, b, c)) {
             System.out.println(categoriseTriangle(a, b, c));
@@ -14,11 +14,11 @@ public class Zad4 {
     }
 
     public static boolean isValidTriangle(int a, int b, int c) {
-        return !(a + b < c || a + c < b || b + c < a);
+        return a > 0 && b > 0 && c > 0 && a + b > c && a + c > b && b + c > a;
     }
 
     public static String categoriseTriangle(int a, int b, int c) {
-        if (a == b && b == c && a == c) {
+        if (a == b && b == c) {
             return "Trójkąt równoboczny";
         }
         if (a == b || b == c || a == c) {

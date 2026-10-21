@@ -11,13 +11,13 @@ public class Zad1 {
     }
 
     public static String decideScholarship(double[] grades) {
-        double avarageGrade = 0;
+        double averageGrade = 0;
         for (double num: grades) {
-            avarageGrade += num;
+            averageGrade += num;
         }
-        avarageGrade = avarageGrade / grades.length;
+        averageGrade = averageGrade / grades.length;
 
-        if (avarageGrade >= 4.5) {
+        if (averageGrade >= 4.5) {
             return "Stypendium przyznane!";
         } else {
             return "Brak Stypendium.";

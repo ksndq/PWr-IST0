@@ -20,6 +20,6 @@ public class Zad2 {
             case Integer i when i >= 50 -> "3.0";
             default -> "2.0 (Brak zaliczenia)";
         };
-        return String.format("Ocena %s", finalGrade);
+        return "Ocena " + finalGrade;
     }
 }

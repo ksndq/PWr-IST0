@@ -8,7 +8,7 @@ public class Zad4 {
         int correctPin = 1234;
         boolean isCardBlocked = false;
 
-        accountBalance = executeTransaction(accountBalance,payoutAmount,pinEntered,correctPin,isCardBlocked);
+        executeTransaction(accountBalance,payoutAmount,pinEntered,correctPin,isCardBlocked);
     }
 
     public static double executeTransaction(

@@ -1,4 +1,4 @@
-package classes.zaj3;
+package classes.list3;
 
 public class Zad2 {
     public static int suma(int liczba) {

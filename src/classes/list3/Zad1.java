@@ -1,22 +1,19 @@
-package classes.zaj3;
+package classes.list3;
 
 public class Zad1 {
     public static void main(String[] args) {
-              //ax^2+bx+c=0
-        //x(ax+b)
         calculate(1, 4, 3);
     }
 
     public static void calculate(double a, double b, double c) {
-        if (a == 0) {
-            if (b == 0) {
-                if (c == 0) {
-                    System.out.println("Tożsamościowe");
-                    return;
-                }
-                System.out.println("Sprzeczne");
+        if (a == 0 && b == 0) {
+            if (c == 0) {
+                System.out.println("Tożsamościowe");
+                return;
             }
+            System.out.println("Sprzeczne");
         }
+
 
         double delta = b * b - 4 * a * c;
         if (delta == 0) {

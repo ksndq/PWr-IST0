@@ -60,8 +60,7 @@ public class Zad4 {
     }
 
     private static void printBox(String text) {
-        String line = "-".repeat(text.length());
-        System.out.printf("%s%n%s%n%s%n", line, text, line);
+        printBox(text, text.length());
     }
 
     private static void printBox(String text, int length) {

@@ -11,20 +11,21 @@ public class Zad1 {
 
         while (batteryLevel > 0 && gameTime < 180) {
             double dischargeRate = (gameTime < 60) ? 12.5 : 7.0;
+
             batteryLevel -= dischargeRate;
             gameTime += 15;
 
-            System.out.printf("Minuty: %d | Pobór: %s%% | Stan baterii: %s%%%n", gameTime, dischargeRate, batteryLevel);
+            System.out.printf("Minuty: %d | Pobór: %.1f%% | Stan baterii: %.1f%%%n",
+                              gameTime, dischargeRate, batteryLevel);
         }
+
         String breakCause;
-        if (batteryLevel <= 0) {
-            if (gameTime >= 180) {
-                breakCause = "poziom baterri spadł poniżej 0% oraz czas trwania symulacji przekroczył 180 minut!";
-            } else {
-                breakCause = "poziom baterii spadł poniżej 0%!";
-            }
+        if (batteryLevel <= 0 && gameTime >= 180) {
+            breakCause = "poziom baterii spadł poniżej 0% oraz czas trwania symulacji osiągnął 180 minut!";
+        } else if (batteryLevel <= 0) {
+            breakCause = "poziom baterii spadł poniżej 0%!";
         } else {
-            breakCause = "czas trwania przekroczył 180 minut!";
+            breakCause = "czas trwania symulacji osiągnął 180 minut!";
         }
 
         System.out.println("Symulacja zakończona: " + breakCause);

@@ -14,7 +14,7 @@ public class Zad3 {
         List<Integer> evenDigits = new ArrayList<>();
         List<Integer> unevenDigits = new ArrayList<>();
         int evenSum = 0;
-        int unevenProduct = 1;
+        long unevenProduct = 1;
         int zeros = 0;
         int biggerThanFive = 0;
         boolean hasSeven = false;

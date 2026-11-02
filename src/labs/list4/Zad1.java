@@ -16,14 +16,14 @@ public class Zad1 {
             gameTime += 15;
 
             System.out.printf("Minuty: %d | Pobór: %.1f%% | Stan baterii: %.1f%%%n",
-                              gameTime, dischargeRate, batteryLevel);
+                              gameTime, dischargeRate, Math.max(batteryLevel, 0));
         }
 
         String breakCause;
         if (batteryLevel <= 0 && gameTime >= 180) {
-            breakCause = "poziom baterii spadł poniżej 0% oraz czas trwania symulacji osiągnął 180 minut!";
+            breakCause = "poziom baterii spadł do 0% oraz czas trwania symulacji osiągnął 180 minut!";
         } else if (batteryLevel <= 0) {
-            breakCause = "poziom baterii spadł poniżej 0%!";
+            breakCause = "poziom baterii spadł do 0%!";
         } else {
             breakCause = "czas trwania symulacji osiągnął 180 minut!";
         }

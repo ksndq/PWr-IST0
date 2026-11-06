@@ -9,6 +9,9 @@ public class Zad2 {
 
         System.out.println("Nieposortowana: " + Arrays.toString(data));
         System.out.println("Posortowana: " + Arrays.toString(bubbleSort(data)));
+
+        System.out.println("Nieposortowana: " + Arrays.toString(data));
+        System.out.println("Posortowana malejąco: " + Arrays.toString(bubbleSort(data, true)));
     }
 
     public static int[] bubbleSort(int[] array) {

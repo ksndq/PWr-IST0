@@ -6,13 +6,23 @@ public class Zad1 {
 
         int min = measurements[0];
         int max = measurements[0];
+        int minIndex = 0;
+        int maxIndex = 0;
         double sum = 0;
 
-        for (int m : measurements) {
-            if (m < min) min = m;
-            if (m > max) max = m;
+        for (int i = 0; i < measurements.length; i++) {
+            int m = measurements[i];
+            if (m < min) {
+                min = m;
+                minIndex = i;
+            }
+            if (m > max) {
+                max = m;
+                maxIndex = i;
+            }
             sum += m;
         }
+
         double average = sum / measurements.length;
         int biggerOrEqual = 0;
         int smaller = 0;
@@ -25,8 +35,8 @@ public class Zad1 {
             }
         }
 
-        System.out.println("Najmniejszy pomiar: " + min);
-        System.out.println("Największy pomiar: " + max);
+        System.out.println("Najmniejszy pomiar: " + min + " (indeks: " + minIndex + ")");
+        System.out.println("Największy pomiar: " + max + " (indeks: " + maxIndex + ")");
         System.out.println("Średnia arytmetyczna pomiarów: " + average);
         System.out.println("Pomiary większe lub równe średniej: " + biggerOrEqual);
         System.out.println("Pomiary mniejsze od średniej: " + smaller);
